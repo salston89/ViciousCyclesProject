@@ -1,0 +1,83 @@
+.body {
+  align-content: center;
+  overflow-x: hidden;
+    overflow-y: hidden; 
+  
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr 1fr;
+    grid-template-rows: 0.01fr  1fr 1fr;
+    grid-template-areas: "logo navbar navbar navbar" "Navigation2 intro intro Trade-Show" "Navigation2 promo promo Trade-Show" "about-us about-us about-us Trade-Show" "footer footer footer footer";
+  }
+  
+  .logo { grid-area: logo; }
+  
+  .Navigation2 { grid-area: Navigation2;
+  
+    height: 100%; /* Full-height: remove this if you want "auto" height */
+    width: 120px; /* Set the width of the sidebar */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1; /* Stay on top */
+    top: 50; /* Stay at the top */
+    left: 0;
+    background-color: #111; /* Black */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 20px;
+  }
+  
+  /* The navigation menu links */
+  Navigation2 a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    text-align-last: center;
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  Navigation2 a:hover {
+    color: #f1f1f1;
+  }
+  
+  /* Style page content */
+.article {
+  margin: auto;
+  width: 50%;
+  padding: 5px;
+  overflow: auto;}
+
+  
+  .intro { grid-area: intro; 
+    margin: auto;
+    width: 50%;
+    border: 3px solid green;
+    padding: 10px;
+    overflow: auto;}
+  
+  .promo { grid-area: promo;
+ 
+ }
+ * {
+  box-sizing: border-box;
+}
+
+.column {
+  float: right;
+  width: 33.33%;
+  padding: 5px;
+}
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+
+.footer {grid-area:footer; 
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+ }
+	
